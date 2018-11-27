@@ -4,6 +4,23 @@ import org.apache.log4j.Logger;
 
 import java.util.*;
 
+/***************
+ * Helloer can say Hello World in a different languages
+ *
+ * sayHello()
+ * method use system time and locale
+ * for print localized message to System.out
+ *
+ * sayHello(String message)
+ * prints arbitrary message to System.out
+ *
+ * sayHello(Locale locale, Date date)
+ * prints localized message to System.out
+ * using param local for localize messages,
+ * available locals is en_US, ru_RU, ru_UA and ukr_UA.
+ * param date used for choose message text regarding to the time of day
+ * **************/
+
 public class Helloer {
     private Calendar calendar = new GregorianCalendar();
     private static final Logger logger = Logger.getLogger(Helloer.class);
