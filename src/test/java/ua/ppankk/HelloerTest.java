@@ -33,7 +33,19 @@ public class HelloerTest {
         String message = "Hello message";
         new Helloer().sayHello(message);
 
-        assertEquals(message, outContent.toString());
+        assertEquals(message + "\n", outContent.toString());
+    }
+
+    @Test
+    public void sayHelloWithParams() {
+        Calendar calendar = new GregorianCalendar();
+        calendar.set(12, 11, 10, 0,8,7);
+        Locale locale = new Locale("ukr", "UA");
+
+        String expectedMessage = "Доброї ночі, Мир!\n";
+        new Helloer().sayHello(locale, calendar.getTime());
+
+        assertEquals(expectedMessage, outContent.toString());
     }
 
     @Test
